@@ -2,7 +2,7 @@
 
 A premium, portfolio-grade responsive e-commerce storefront landing page for a modern boutique florist brand. Built using semantic HTML5, modern CSS3 (Custom Properties & Grid/Flexbox), and vanilla JavaScript.
 
-### 🔗 [Live Demo]([https://tanvir3873.github.io/Flower-Hut/](https://siddik73.github.io/Flower-Hut/))
+### 🔗 [Live Demo](https://tanvir3873.github.io/Flower-Hut/](https://siddik73.github.io/Flower-Hut/))
 
 ---
 
