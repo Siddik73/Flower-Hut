@@ -961,12 +961,14 @@ ul {
 
 .subscribe-form {
     display: flex;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     border-radius: var(--radius-round);
     padding: 6px;
     margin-bottom: 12px;
+    overflow: hidden; /* Prevents background/input bleeding and forces rounded corners */
 }
 
 .subscribe-form input {
@@ -976,10 +978,16 @@ ul {
     outline: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    padding: 12px 20px;
+    padding: 12px 24px;
     color: #ffffff;
     font-size: 1rem;
     width: 100%;
+}
+
+.subscribe-form input:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .subscribe-form input::placeholder {
@@ -991,11 +999,11 @@ ul {
     color: var(--text-light);
     padding: 12px 32px;
     border-radius: var(--radius-round);
-    border-radius: 60px;
     font-weight: 500;
     cursor: pointer;
     box-shadow: var(--shadow-md);
     transition: background-color var(--transition-fast), transform var(--transition-fast);
+    white-space: nowrap;
 }
 
 .subscribe-form button:hover {
@@ -1290,6 +1298,7 @@ ul {
 
     .subscribe-form {
         flex-direction: column;
+        align-items: stretch;
         border-radius: var(--radius-md);
         background-color: rgba(255, 255, 255, 0.1);
         padding: 12px;
