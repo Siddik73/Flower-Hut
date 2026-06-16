@@ -3,150 +3,452 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover premium floral arrangements, handpicked bouquets, and indoor plants at Flower Hut. Same-day delivery and click & collect available.">
+    <meta name="keywords" content="flowers, florist, rose bonsai, tulip pot, flower delivery, plants, fresh bouquet, florist shop">
+    <meta name="author" content="Tanvir Siddik">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#E55473">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tanvir3873.github.io/Flower-Hut/">
+    <meta property="og:title" content="Flower Hut | Premium Handcrafted Floral Bouquets & Plants">
+    <meta property="og:description" content="Discover premium floral arrangements, handpicked bouquets, and indoor plants at Flower Hut. Same-day delivery and click & collect available.">
+    <meta property="og:image" content="flowerAsset/pngwing 10.png">
+    <meta property="og:site_name" content="Flower Hut">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tanvir3873.github.io/Flower-Hut/">
+    <meta property="twitter:title" content="Flower Hut | Premium Handcrafted Floral Bouquets">
+    <meta property="twitter:description" content="Discover premium floral arrangements, handpicked bouquets, and indoor plants at Flower Hut. Same-day delivery and click & collect available.">
+    <meta property="twitter:image" content="flowerAsset/pngwing 10.png">
+
+    <!-- Favicon (Fallback) -->
+    <link rel="icon" type="image/png" href="flowerAsset/Group 57.png">
+
+    <title>Flower Hut | Premium Floral Boutique</title>
+
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data (JSON-LD) for LocalBusiness/E-commerce -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Florist",
+      "name": "Flower Hut",
+      "image": "https://tanvir3873.github.io/Flower-Hut/flowerAsset/pngwing%2010.png",
+      "url": "https://tanvir3873.github.io/Flower-Hut/",
+      "telephone": "+1-800-555-FLWR",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "101 Blossom Boulevard",
+        "addressLocality": "Floral City",
+        "addressRegion": "FC",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/FlowerHut",
+        "https://www.instagram.com/FlowerHut"
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <div class="banner">
-        <div class="bannerHeading">
-            <h1>Let's make <br>
-                beautiful flowers a <br>
-                part of your life.</h1>
-            <p>It is a long established fact that a reader will be distracted by
-                the readable <br>
-                content of a page when looking at its layout. The point of using
-                Lorem Ipsum is <br>
-                that it has a more-or-less normal distribution of letters.</p>
-            <button class="btnShop">Shop Now</button>
-        </div>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo" aria-label="Flower Hut Home">
+                <span>Flower</span>Hut
+            </a>
+            
+            <nav aria-label="Primary Navigation">
+                <ul id="nav-links" class="nav-links">
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
 
-        <img
-            class="bannerImg"
-            src="/flowerAsset/pngwing 10.png"
-            alt=""
-        >
-    </div>
-    <section class="featureSection">
-        <h2>Our Featured Flowers</h2>
-        <p>It is a long established fact that a reader will be distracted by the
-            readable <br>
-            content of a page when looking at its layout</p>
-
-        <div class="flowerClass">
-            <div class="firstFlower">
-                <img
-                    src="/flowerAsset/pngwing 6.png"
-                    alt=""
-                > <br>
-                <a href="#">Pink Flower Tree</a>
+            <div class="nav-actions">
+                <!-- Theme Toggle Switch -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle color theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                
+                <!-- Mobile Navigation Menu Toggle Button -->
+                <button id="menu-toggle" class="menu-toggle-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+                    <i data-lucide="menu"></i>
+                </button>
             </div>
-            <div class="secondFlower">
-                <img
-                    src="/flowerAsset/pngwing 5.png"
-                    alt=""
-                > <br>
-                <a href="#">Pink Flower Tree</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content reveal active">
+                    <span class="hero-tagline">Fresh & Handcrafted</span>
+                    <h1 class="hero-title">Let's make <br>beautiful flowers a <br>part of your <span>life</span>.</h1>
+                    <p class="hero-desc">Sourced directly from sustainable local farms, our floral designs are curated by award-winning artisans to spread warmth, fragrance, and color into your everyday life.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary">Shop Bouquets <i data-lucide="arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Get 25% Off</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal active">
+                    <div class="hero-image-bg"></div>
+                    <img class="hero-image" src="flowerAsset/pngwing 10.png" alt="A modern pastel pink flower display arranged in a premium vase">
+                </div>
             </div>
-            <div class="thirdFlower">
-                <img
-                    src="/flowerAsset/pngwing 7.png"
-                    alt=""
-                > <br>
-                <a href="#">Pink Flower Tree</a>
+        </section>
+
+        <!-- SERVICES / SUPPORT BLOCK -->
+        <section class="support section-padding">
+            <div class="container support-grid">
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="truck" aria-hidden="true"></i>
+                    </div>
+                    <h3>Same Day Delivery</h3>
+                    <p>Click & collect or choose premium local delivery. Handcrafted order reaches your door within hours.</p>
+                </div>
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="flower" aria-hidden="true"></i>
+                    </div>
+                    <h3>100% Fresh Guarantee</h3>
+                    <p>Fresh blossoms sourced daily from local organic farms. Guaranteed to bloom for at least 7 days.</p>
+                </div>
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="shield-check" aria-hidden="true"></i>
+                    </div>
+                    <h3>Safe & Secure Checkout</h3>
+                    <p>Processed using bank-grade secure transaction servers. Protecting your data is our priority.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT GRID & FILTERS SECTION -->
+        <section id="products" class="featureSection section-padding container">
+            <div class="text-center">
+                <span class="badge badge-primary">Our Collections</span>
+                <h2 class="section-title">Featured Creations</h2>
+                <p class="section-desc">Each arrangement features premium fresh blossoms curated by our floral designer teams. Use filters or search to find your match.</p>
             </div>
 
-        </div>
-    </section>
+            <!-- Product search and filters controls -->
+            <div class="products-filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="flowers">Flowers</button>
+                <button class="filter-btn" data-filter="trees">Bonsai & Trees</button>
+                <button class="filter-btn" data-filter="deals">Hot Deals</button>
+            </div>
 
-    <section class="supportSection">
-        <div class="firstBlock">
-            <img
-                src="/flowerAsset/Group 57.png"
-                alt=""
-            >
-            <h5>Same Day Delivery. Click & Collect.</h5>
-        </div>
-        <div class="secondBlock">
-            <img
-                src="/flowerAsset/Group 58.png"
-                alt=""
-            >
-            <h5>Same Day Delivery. Click & Collect.</h5>
-        </div>
-        <div class="thirdBlock">
-            <img
-                src="/flowerAsset/Group 59.png"
-                alt=""
-            >
-            <h5>Same Day Delivery. Click & Collect.</h5>
-        </div>
-    </section>
+            <div class="search-box">
+                <i data-lucide="search" aria-hidden="true"></i>
+                <input type="text" id="product-search" placeholder="Search flowers, bonsai, shrubs..." aria-label="Search products">
+            </div>
 
-    <section class="hotDeal">
-        <div class="hotDealHeading">
-            <h1>Hot Deal ! Sale Up To 25% <span>Off</span></h1>
-            <p>It is a long established fact that a reader will be distracted by
-                the readable <br>
-                content of a page when looking at its layout.</p>
-            <button class="btnShop">Sign Up</button>
-        </div>
+            <!-- Dynamic grid content rendered by JavaScript -->
+            <div id="products-grid" class="products-grid">
+                <!-- Javascript will load the products here -->
+            </div>
+        </section>
 
-        <img
-            class="bannerImg"
-            src="/flowerAsset/pngwing 8.png"
-            alt=""
-        >
-    </section>
+        <!-- HOT DEAL BANNER -->
+        <section class="hot-deal section-padding">
+            <div class="container hot-deal-grid">
+                <div class="hot-deal-content reveal">
+                    <span class="hot-deal-badge">Limited Time Offer</span>
+                    <h2>Hot Deal ! Sale Up To <br><span>25% Off</span> Everything</h2>
+                    <p>Celebrate summer with premium orchids, bonsai trees, and fresh garden roses. Sign up for our seasonal newsletter today and claim your discount coupon instantly.</p>
+                    
+                    <!-- Countdown Display -->
+                    <div class="deal-countdown" aria-label="Countdown timer">
+                        <div class="countdown-box">
+                            <span class="countdown-time">14</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-time">08</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-time">45</span>
+                            <span class="countdown-label">Mins</span>
+                        </div>
+                    </div>
 
-    <section class="instagramSection">
-        <h1>Instagram</h1>
-        <p>It is a long established fact that a reader will be distracted by the
-            readable <br>
-            content of a page when looking at its layout.</p>
-        <div class="instagramImg">
-            <img
-                src="/flowerAsset//Rectangle 4.png"
-                alt=""
-            >
-            <img
-                src="/flowerAsset//Rectangle 5.png"
-                alt=""
-            >
-            <img
-                src="/flowerAsset//Rectangle 4.png"
-                alt=""
-            >
-            <img
-                src="/flowerAsset//Rectangle 5.png"
-                alt=""
-            >
-        </div>
-    </section>
+                    <a href="#contact" class="btn btn-primary">Claim Coupon <i data-lucide="ticket"></i></a>
+                </div>
+                <div class="hot-deal-image-wrapper reveal">
+                    <img class="hot-deal-image" src="flowerAsset/pngwing 8.png" alt="A premium bouquet of freshly cut red roses tied with a pink ribbon">
+                </div>
+            </div>
+        </section>
 
-    <section class="subscribeSection">
-        <h2>Get The Latest Deals</h2>
-        <p>$30 coupon for first shopping</p>
-        <div>
-            <input type="text" id="fname" name="firstName" placeholder="Enter your email here....">
-            <button>Subscribe</button>
-        </div>
-    </section>
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="testimonials section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <span class="badge badge-accent">Reviews</span>
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <p class="section-desc">Read true reviews from individuals who transformed their living spaces with Flower Hut creations.</p>
+                </div>
 
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <span class="quote-icon" aria-hidden="true">“</span>
+                        <div class="stars" aria-label="5 out of 5 stars rating">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                        </div>
+                        <p class="testimonial-text">"The Pink Rose Bonsai arrived in absolute perfect health! It's been blooming beautifully in my study room for weeks. Outstanding service."</p>
+                        <div class="testimonial-author">
+                            <img class="author-avatar" src="flowerAsset/Rectangle 4.png" alt="Olivia Vance portrait">
+                            <div>
+                                <span class="author-name">Olivia Vance</span>
+                                <span class="author-role">Botanist & Collector</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <span class="quote-icon" aria-hidden="true">“</span>
+                        <div class="stars" aria-label="5 out of 5 stars rating">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                        </div>
+                        <p class="testimonial-text">"Same day delivery was exceptionally fast! The tulips were extremely fresh and beautifully arranged in a gorgeous glass container."</p>
+                        <div class="testimonial-author">
+                            <img class="author-avatar" src="flowerAsset/Rectangle 5.png" alt="Marcus Sterling portrait">
+                            <div>
+                                <span class="author-name">Marcus Sterling</span>
+                                <span class="author-role">Home Stylist</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <span class="quote-icon" aria-hidden="true">“</span>
+                        <div class="stars" aria-label="5 out of 5 stars rating">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                        </div>
+                        <p class="testimonial-text">"Customer support went above and beyond to personalize my mother's birthday orchid. Highly recommended for premium gifts."</p>
+                        <div class="testimonial-author">
+                            <img class="author-avatar" src="flowerAsset/Rectangle 6.png" alt="Aria Montgomery portrait">
+                            <div>
+                                <span class="author-name">Aria Montgomery</span>
+                                <span class="author-role">Customer Care Advocate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ ACCORDION SECTION -->
+        <section id="faq" class="faq section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <span class="badge badge-primary">FAQ</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-desc">Got questions? Find quick answers here about delivery, sourcing, and plant care instructions.</p>
+                </div>
+
+                <div class="faq-wrapper">
+                    <div class="faq-item reveal">
+                        <button class="faq-question-btn" aria-expanded="false">
+                            How fast is your same-day flower delivery?
+                            <i data-lucide="chevron-down" class="faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>For orders placed before 2:00 PM local time (Monday through Saturday), we guarantee same-day hand-delivery to residential and commercial locations. Click & collect is ready in 1 hour.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-question-btn" aria-expanded="false">
+                            How long do your fresh bouquets typically last?
+                            <i data-lucide="chevron-down" class="faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We source our flowers directly from local growers. With basic watering and care, our bouquets are guaranteed to maintain fresh, vibrant blossoms for at least 7 to 10 days.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-question-btn" aria-expanded="false">
+                            Do you offer custom floral arrangements for events?
+                            <i data-lucide="chevron-down" class="faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! We provide customized arrangements for weddings, corporate events, and personal celebrations. Please get in touch with our design team through the newsletter or support channels.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-question-btn" aria-expanded="false">
+                            How do I care for my new bonsai or orchid tree?
+                            <i data-lucide="chevron-down" class="faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Each bonsai and plant purchase includes a detailed digital care instruction card. Generally, they require bright, indirect sunlight and watering once the topsoil feels dry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTAGRAM FEED GALLERY -->
+        <section class="instagramSection section-padding container">
+            <div class="text-center">
+                <span class="badge badge-accent">Social Grid</span>
+                <h2 class="section-title">Follow Us on Instagram</h2>
+                <p class="section-desc">Stay inspired by our latest arrangements, botanical styling, and fresh deliveries. Tag @FlowerHut to get featured.</p>
+            </div>
+            
+            <div class="instagram-grid">
+                <div class="instagram-card reveal">
+                    <img src="flowerAsset/Rectangle 4.png" alt="A pink rose arrangement on a bright white marble table">
+                    <div class="instagram-overlay">
+                        <i data-lucide="instagram" aria-label="Instagram logo link"></i>
+                    </div>
+                </div>
+                <div class="instagram-card reveal">
+                    <img src="flowerAsset/Rectangle 5.png" alt="Close up shot of fresh yellow tulips in a ceramic container">
+                    <div class="instagram-overlay">
+                        <i data-lucide="instagram" aria-label="Instagram logo link"></i>
+                    </div>
+                </div>
+                <div class="instagram-card reveal">
+                    <img src="flowerAsset/Rectangle 6.png" alt="A green bonsai tree placed neatly in a warm study room setting">
+                    <div class="instagram-overlay">
+                        <i data-lucide="instagram" aria-label="Instagram logo link"></i>
+                    </div>
+                </div>
+                <div class="instagram-card reveal">
+                    <img src="flowerAsset/Rectangle 5.png" alt="Vibrant bouquet of pink, orange, and white garden flowers">
+                    <div class="instagram-overlay">
+                        <i data-lucide="instagram" aria-label="Instagram logo link"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER / SUBSCRIBE SECTION -->
+        <section id="contact" class="subscribeSection section-padding container">
+            <div class="subscribe">
+                <div class="subscribe-box reveal">
+                    <h2>Get The Latest Deals</h2>
+                    <p>Subscribe to the Flower Hut newsletter and receive a <strong>$30 coupon code</strong> instantly for your first purchase!</p>
+                    
+                    <form id="newsletter-form" class="subscribe-form" novalidate>
+                        <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address here..." aria-label="Newsletter email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div id="newsletter-status" class="form-status" role="status" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <h1><span>Flower</span>Shop</h1>
-        <p>It is a long established fact that a reader will be distracted by the
-            readable <br>
-            content of a page when looking at its layout.</p>
-        <span class="copyright">@2020-2023, FlowerShop.com. All rights reserved.</span>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2><span>Flower</span>Hut</h2>
+                <p>Spreading color, fragrance, and happiness through premium handcrafted flowers, bonsai, and succulents since 2020.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/FlowerHut" class="social-link" aria-label="Follow Flower Hut on Facebook" target="_blank" rel="noopener">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://instagram.com/FlowerHut" class="social-link" aria-label="Follow Flower Hut on Instagram" target="_blank" rel="noopener">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/FlowerHut" class="social-link" aria-label="Follow Flower Hut on Twitter" target="_blank" rel="noopener">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Collections</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="#products">Rose Bouquets</a></li>
+                    <li><a href="#products">Bonsai Trees</a></li>
+                    <li><a href="#products">Garden Flowers</a></li>
+                    <li><a href="#products">Limited Deals</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul style="gap: 16px;">
+                    <li style="display: flex; gap: 8px; align-items: flex-start; color: #9ca3af;">
+                        <i data-lucide="map-pin" style="flex-shrink:0; color: var(--primary);"></i>
+                        <span>101 Blossom Boulevard,<br>Floral City, FC 12345</span>
+                    </li>
+                    <li style="display: flex; gap: 8px; align-items: center; color: #9ca3af;">
+                        <i data-lucide="phone" style="color: var(--primary);"></i>
+                        <span>+1 (800) 555-FLWR</span>
+                    </li>
+                    <li style="display: flex; gap: 8px; align-items: center; color: #9ca3af;">
+                        <i data-lucide="mail" style="color: var(--primary);"></i>
+                        <span>support@flowerhut.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <span class="copyright">&copy; 2020-2026 Flower Hut Inc. All rights reserved.</span>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Lucide Icons Library and Custom JavaScript -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
