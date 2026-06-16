@@ -965,11 +965,15 @@ ul {
 
 .subscribe-form input {
     flex-grow: 1;
-    background: none;
-    border: none;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
     padding: 12px 20px;
     color: #ffffff;
     font-size: 1rem;
+    width: 100%;
 }
 
 .subscribe-form input::placeholder {
