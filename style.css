@@ -65,7 +65,9 @@ body.dark-mode {
 /* ==========================================================================
    RESET & BASE STYLES
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -97,7 +99,8 @@ img {
     display: block;
 }
 
-button, input {
+button,
+input {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
@@ -278,11 +281,13 @@ ul {
     transition: width var(--transition-fast);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--primary);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
@@ -506,7 +511,8 @@ ul {
     transition: all var(--transition-fast);
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
     background-color: var(--primary);
     color: var(--text-light);
     border-color: var(--primary);
@@ -985,6 +991,7 @@ ul {
     color: var(--text-light);
     padding: 12px 32px;
     border-radius: var(--radius-round);
+    border-radius: 60px;
     font-weight: 500;
     cursor: pointer;
     box-shadow: var(--shadow-md);
@@ -1162,15 +1169,31 @@ ul {
    KEYFRAME ANIMATIONS
    ========================================================================== */
 @keyframes float-animate {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes blob-animate {
-    0% { border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%; }
-    50% { border-radius: 40% 60% 50% 50% / 50% 40% 60% 50%; }
-    100% { border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%; }
+    0% {
+        border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+    }
+
+    50% {
+        border-radius: 40% 60% 50% 50% / 50% 40% 60% 50%;
+    }
+
+    100% {
+        border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+    }
 }
 
 /* ==========================================================================
@@ -1180,12 +1203,15 @@ ul {
     .hero-title {
         font-size: 3rem;
     }
+
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .instagram-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1195,7 +1221,7 @@ ul {
     .menu-toggle-btn {
         display: flex;
     }
-    
+
     .nav-links {
         position: fixed;
         top: var(--header-height);
@@ -1211,57 +1237,57 @@ ul {
         transition: left var(--transition-normal);
         z-index: 99;
     }
-    
+
     .nav-links.active {
         left: 0;
     }
-    
+
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
     }
-    
+
     .hero-content {
         margin: 0 auto;
     }
-    
+
     .hero-buttons {
         justify-content: center;
     }
-    
+
     .hero-image-wrapper {
         order: -1;
     }
-    
+
     .support-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .hot-deal-grid {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
     }
-    
+
     .hot-deal-content {
         margin: 0 auto;
     }
-    
+
     .deal-countdown {
         justify-content: center;
     }
-    
+
     .hot-deal-image-wrapper {
         order: -1;
     }
-    
+
     .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    
+
     .subscribe-form {
         flex-direction: column;
         border-radius: var(--radius-md);
@@ -1269,21 +1295,21 @@ ul {
         padding: 12px;
         gap: 12px;
     }
-    
+
     .subscribe-form input {
         text-align: center;
     }
-    
+
     .subscribe-form button {
         border-radius: var(--radius-round);
         width: 100%;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
@@ -1294,19 +1320,24 @@ ul {
     html {
         font-size: 14px;
     }
+
     .hero-title {
         font-size: 2.25rem;
     }
+
     .hero-buttons {
         flex-direction: column;
         width: 100%;
     }
+
     .hero-buttons .btn {
         width: 100%;
     }
+
     .products-grid {
         grid-template-columns: 1fr;
     }
+
     .instagram-grid {
         grid-template-columns: 1fr;
     }
